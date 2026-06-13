@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(30px)
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: rem(35px);
+    list-style: none;
+    padding: 0;
+
+    .nav__link {
+        @extend %reset-link-styles;
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: rem(15px);
+        line-height: 160%;
+        letter-spacing: rem(0.15px);
+        color: $color-dark-s;
+        transition: $animations-time;
+
+        &:not(.nav__link--active):hover {
+            cursor: pointer;
+            color: $color-light-s;
+        }
+
+        &.nav__link--active {
+            cursor: default;
+            color: $color-light-s;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: rem(114px);
+                height: rem(3px);
+                background: $color-primary;
+                position: absolute;
+                left: 0;
+                bottom: rem(-3px);
+            }
+        }
+    }
+}

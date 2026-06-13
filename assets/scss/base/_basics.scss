@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+}
+
+.container {
+    width: rem(1280px);
+    margin: 0 auto;
+    padding: 0 rem(40px);
+}
