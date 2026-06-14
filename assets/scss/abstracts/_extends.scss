@@ -1,6 +1,13 @@
+@use 'functions' as *;
+
 %reset-link-styles {
     display: block;
     width: fit-content;
     text-decoration: none;
     color: inherit;
+}
+
+%section-padding {
+    padding-top: rem(80px);
+    padding-bottom: rem(100px);
 }

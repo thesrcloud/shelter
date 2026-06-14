@@ -349,6 +349,11 @@ template {
   color: inherit;
 }
 
+.about {
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -502,6 +507,27 @@ body {
 .not-only__description {
   text-align: justify;
   color: #cdcdcd;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5rem;
+}
+
+.about__content-block {
+  width: 26.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.about__content-block * {
+  margin: 0;
+}
+
+.about__title {
+  width: 23.125rem;
 }
 
 /*# sourceMappingURL=main.css.map */
