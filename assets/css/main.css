@@ -355,7 +355,7 @@ template {
   background: transparent;
 }
 
-.our-friends, .about {
+.help, .our-friends, .about {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
 }
@@ -651,6 +651,41 @@ body {
 .card:hover .card__button {
   background: #fddcc4;
   border-color: #fddcc4;
+}
+
+.help__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+.help__title {
+  width: 19.375rem;
+  text-align: center;
+  margin: 0;
+}
+
+.help__content-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.4375rem 7.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+.help__list-item h3 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
