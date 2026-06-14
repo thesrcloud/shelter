@@ -342,7 +342,7 @@ template {
   font-style: normal;
   font-display: swap;
 }
-.shelter-logo-link, .nav__list .nav__link, .primary-btn {
+.footer__link, .addition__link, .shelter-logo-link, .nav__list .nav__link, .primary-btn {
   display: block;
   width: fit-content;
   text-decoration: none;
@@ -355,7 +355,7 @@ template {
   background: transparent;
 }
 
-.help, .our-friends, .about {
+.addition, .help, .our-friends, .about {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
 }
@@ -686,6 +686,107 @@ body {
 }
 .help__list-item h3 {
   margin: 0;
+}
+
+.addition {
+  padding-top: 4.875rem;
+  padding-bottom: 6.1875rem;
+  background: #f6f6f6;
+}
+
+.addition__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.addition__content-block {
+  width: 23.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.addition__content-block > * {
+  margin: 0;
+}
+
+.addition__title {
+  width: 18.75rem;
+}
+
+.addition__card-name {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.addition__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  border-radius: 9px;
+  padding: 0.625rem 0.9375rem;
+  color: #545454;
+}
+
+.donation__description {
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 150%;
+  color: #b2b2b2;
+}
+
+.footer {
+  padding-top: 2.5rem;
+  background: url("/assets/images/noise_transparent@2x.webp"), radial-gradient(circle at top left, #5B483A, #262425);
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__links-block {
+  width: 18.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+  padding-top: 1rem;
+}
+.footer__links-block > * {
+  margin: 0;
+}
+.footer__links-block h2 {
+  color: #fff;
+}
+.footer__links-block:nth-child(2) {
+  gap: 2rem;
+  margin-right: 1.3125rem;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
 }
 
 /*# sourceMappingURL=main.css.map */

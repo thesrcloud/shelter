@@ -1,0 +1,64 @@
+@use '../abstracts/' as *;
+
+.addition {
+    @extend %section-padding;
+    padding-top: rem(78px);
+    padding-bottom: rem(99px);
+    background: $color-light-l;
+}
+
+.addition__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(30px);
+}
+
+.addition__content-block {
+    width: rem(380px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+
+    & > * {
+        margin: 0;
+    }
+}
+
+.addition__title {
+    width: rem(300px);
+}
+
+.addition__card-name {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(15px);
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+.addition__link {
+    @extend %reset-link-styles;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(15px);
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(20px);
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    border-radius: 9px;
+    padding: rem(10px) rem(15px);
+    color: $color-dark-l;
+}
+
+.donation__description {
+    font-family: $second-family;
+    font-style: italic;
+    font-weight: 400;
+    font-size: rem(12px);
+    line-height: 150%;
+    color: $color-dark-m;
+}
