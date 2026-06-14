@@ -7,6 +7,12 @@
     color: inherit;
 }
 
+%reset-btn-styles {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
 %section-padding {
     padding-top: rem(80px);
     padding-bottom: rem(100px);

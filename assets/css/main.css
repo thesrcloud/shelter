@@ -349,7 +349,13 @@ template {
   color: inherit;
 }
 
-.about {
+.card .card__button, .slider__btn {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.our-friends, .about {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
 }
@@ -377,6 +383,15 @@ body {
   color: #545454;
 }
 
+.title-h3 {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
 .section-p {
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -398,6 +413,7 @@ body {
   transition: 0.3s;
 }
 .primary-btn:hover {
+  cursor: pointer;
   background: #fddcc4;
 }
 
@@ -528,6 +544,113 @@ body {
 
 .about__title {
   width: 23.125rem;
+}
+
+.our-friends {
+  background: #f6f6f6;
+}
+
+.our-friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.75rem;
+}
+.our-friends__wrapper * {
+  margin: 0;
+}
+
+.our-friends__title {
+  width: 25rem;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__cards {
+  width: 61.875rem;
+  min-height: 27.1875rem;
+  display: flex;
+  order: 2;
+  overflow: hidden;
+}
+
+.slider__carousel {
+  display: flex;
+  margin-left: -100%;
+}
+
+.slider__card-block {
+  min-width: 100%;
+  display: flex;
+  gap: 5.625rem;
+}
+
+.slider__btn {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 0.125rem solid #f1cdb3;
+  transition: 0.3s;
+}
+.slider__btn svg path {
+  fill: #292929;
+}
+.slider__btn:not(.btn-inactive):hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+.slider__btn:not(.btn-inactive):active {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+  transform: scale(0.95);
+}
+.slider__btn.btn-inactive {
+  border-color: #cdcdcd;
+}
+.slider__btn.btn-inactive svg path {
+  fill: #cdcdcd;
+}
+
+.btn-prev {
+  order: 1;
+}
+
+.btn-next {
+  order: 3;
+}
+
+.card {
+  width: 16.875rem;
+  min-height: 27.1875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  border-radius: 0.5625rem;
+  overflow: hidden;
+  background: #fafafa;
+}
+.card .card__button {
+  border: 0.125rem solid #f1cdb3;
+  padding: 0.75rem 2.75rem;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover .card__button {
+  background: #fddcc4;
+  border-color: #fddcc4;
 }
 
 /*# sourceMappingURL=main.css.map */

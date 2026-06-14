@@ -23,6 +23,15 @@ body {
     color: $color-dark-l;
 }
 
+.title-h3 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(20px);
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark-l;
+}
+
 .section-p {
     font-family: $second-family;
     font-weight: 400;
@@ -45,6 +54,7 @@ body {
     transition: $animations-time;
 
     &:hover {
+        cursor: pointer;
         background: $color-primary-light;
     }
 }
