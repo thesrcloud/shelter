@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+.not-only__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-only__content-block {
+    width: rem(460px);
+    min-height: rem(322px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(42px);
+    margin-top: rem(163px);
+
+    & * {
+        margin: 0;
+    }
+}
+
+.not-only__title {
+    width: rem(310px);
+    font-size: rem(44px);
+    line-height: 130%;
+    letter-spacing: normal;
+    color: $color-light-xl;
+}
+
+.not-only__description {
+    text-align: justify;
+    color: $color-dark-s;
+}
