@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+
+.b-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(59px);
+}
+
+.b-slider__window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.bs-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(30px) rem(40px);
+}
+
+.b-slider__carousel {
+    display: flex;
+}
+
+.b-slider__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(20px);
+
+    .btn-inactive {
+        color: $color-dark-s;
+    }
+}

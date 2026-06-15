@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+
+.pets--header {
+
+    .header__wrapper {
+        min-height: rem(120px);
+        margin-top: 0;
+    }
+}
