@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+.pets {
+    @extend %section-padding;
+    background: $color-light-l;
+
+    .pets__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(60px);
+    }
+}
+
+.pets__title {
+    text-align: center;
+    margin: 0;
+}
+
+.bs__button {
+    @extend %reset-btn-styles;
+    width: rem(52px);
+    height: rem(52px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: rem(2px) solid $color-primary;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(20px);
+    text-align: center;
+    color: $color-dark-3xl;
+    transition: $animations-time;
+
+    svg path {
+        fill: $color-dark-3xl;
+    }
+
+    &:not(.btn-inactive):hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
+
+    &:not(.btn-inactive):active {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+        transform: scale(0.95);
+    }
+
+    &.btn-inactive {
+        border-color: $color-dark-s;
+
+        svg path {
+            fill: $color-dark-s;
+        }
+    }
+}

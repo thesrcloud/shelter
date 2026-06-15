@@ -349,13 +349,13 @@ template {
   color: inherit;
 }
 
-.card .card__button, .slider__btn {
+.bs__button, .card .card__button, .slider__btn {
   outline: none;
   border: none;
   background: transparent;
 }
 
-.addition, .help, .our-friends, .about {
+.pets, .addition, .help, .our-friends, .about {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
 }
@@ -394,6 +394,7 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   color: #545454;
+  margin: 0;
 }
 
 .section-p {
@@ -643,7 +644,7 @@ body {
 
 .card {
   width: 16.875rem;
-  min-height: 27.1875rem;
+  height: 27.1875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -803,6 +804,97 @@ body {
 }
 .footer__link:hover {
   filter: brightness(150%);
+}
+
+.pets--header .header__wrapper {
+  min-height: 7.5rem;
+  margin-top: 0;
+}
+
+.pets {
+  background: #f6f6f6;
+}
+.pets .pets__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+.pets__title {
+  text-align: center;
+  margin: 0;
+}
+
+.bs__button {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 0.125rem solid #f1cdb3;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #292929;
+  transition: 0.3s;
+}
+.bs__button svg path {
+  fill: #292929;
+}
+.bs__button:not(.btn-inactive):hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+.bs__button:not(.btn-inactive):active {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+  transform: scale(0.95);
+}
+.bs__button.btn-inactive {
+  border-color: #cdcdcd;
+}
+.bs__button.btn-inactive svg path {
+  fill: #cdcdcd;
+}
+
+.b-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6875rem;
+}
+
+.b-slider__window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bs-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.875rem 2.5rem;
+}
+
+.b-slider__carousel {
+  display: flex;
+}
+
+.b-slider__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.b-slider__buttons .btn-inactive {
+  color: #cdcdcd;
 }
 
 /*# sourceMappingURL=main.css.map */
