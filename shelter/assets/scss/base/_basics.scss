@@ -10,6 +10,12 @@
 
 body {
     font-family: $font-family;
+
+    @media (max-width: 1280px) {
+        & {
+            width: fit-content;
+        }
+    }
 }
 
 .container {
