@@ -904,10 +904,5 @@ body {
 .b-slider__buttons .bs__button-current {
   background-color: #f1cdb3;
 }
-.b-slider__buttons .bs__button-current:hover {
-  cursor: default;
-  background-color: #f1cdb3;
-  border-color: #f1cdb3;
-}
 
 /*# sourceMappingURL=main.css.map */
