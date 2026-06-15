@@ -371,6 +371,11 @@ template {
 body {
   font-family: "Georgia", sans-serif;
 }
+@media (max-width: 1280px) {
+  body {
+    width: fit-content;
+  }
+}
 
 .container {
   width: 80rem;
@@ -895,6 +900,14 @@ body {
 }
 .b-slider__buttons .btn-inactive {
   color: #cdcdcd;
+}
+.b-slider__buttons .bs__button-current {
+  background-color: #f1cdb3;
+}
+.b-slider__buttons .bs__button-current:hover {
+  cursor: default;
+  background-color: #f1cdb3;
+  border-color: #f1cdb3;
 }
 
 /*# sourceMappingURL=main.css.map */
