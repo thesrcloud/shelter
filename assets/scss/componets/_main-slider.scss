@@ -1,0 +1,72 @@
+@use '../abstracts/' as *;
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__cards {
+    width: rem(990px);
+    min-height: rem(435px);
+    display: flex;
+    order: 2;
+    overflow: hidden;
+}
+
+.slider__carousel {
+    display: flex;
+    margin-left: -100%;
+}
+
+.slider__card-block {
+    min-width: 100%;
+    display: flex;
+    gap: rem(90px);
+}
+
+.slider__btn {
+    @extend %reset-btn-styles;
+    width: rem(52px);
+    height: rem(52px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: rem(2px) solid $color-primary;
+    transition: $animations-time;
+
+    svg path {
+        fill: $color-dark-3xl;
+    }
+
+    &:not(.btn-inactive):hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
+
+    &:not(.btn-inactive):active {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+        transform: scale(0.95);
+    }
+
+    &.btn-inactive {
+        border-color: $color-dark-s;
+
+        svg path {
+            fill: $color-dark-s;
+        }
+    }
+}
+
+.btn-prev {
+    order: 1;
+}
+
+.btn-next {
+    order: 3;
+}

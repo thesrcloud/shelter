@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.our-friends {
+    @extend %section-padding;
+    background: $color-light-l;
+}
+
+.our-friends__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(60px);
+
+    & * {
+        margin: 0;
+    }
+}
+
+.our-friends__title {
+    width: rem(400px);
+    text-align: center;
+}

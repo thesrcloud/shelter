@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.card {
+    width: rem(270px);
+    min-height: rem(435px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(30px);
+    border-radius: rem(9px);
+    overflow: hidden;
+    background: $color-light-s;
+
+    & .card__button {
+        @extend %reset-btn-styles;
+        border: rem(2px) solid $color-primary;
+        padding: rem(12px) rem(44px);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $color-light-xl;
+
+        .card__button {
+            background: $color-primary-light;
+            border-color: $color-primary-light;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+
+.about {
+    @extend %section-padding;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(120px);
+}
+
+.about__content-block {
+    width: rem(428px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(25px);
+
+    & * {
+        margin: 0;
+    }
+}
+
+.about__title {
+    width: rem(370px);
+}
+
+.about__description {
+    // text-align: center;
+}

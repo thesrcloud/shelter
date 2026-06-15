@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+
+.footer {
+    padding-top: rem(40px);
+    background: url('/assets/images/noise_transparent@2x.webp'),
+        radial-gradient(circle at top left, #5B483A, #262425);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__links-block {
+    width: rem(302px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(42px);
+    padding-top: rem(16px);
+
+    &>* {
+        margin: 0
+    }
+
+    h2 {
+        color: $color-light-xl;
+    }
+
+    &:nth-child(2) {
+        gap: rem(32px);
+        margin-right: rem(21px);
+    }
+}
+
+.footer__link {
+    @extend %reset-link-styles;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20px);
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(20px);
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    transition: $animations-time;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}

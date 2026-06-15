@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+}
+
+.container {
+    width: rem(1280px);
+    margin: 0 auto;
+    padding: 0 rem(40px);
+}
+
+.section-title {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(35px);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+.title-h3 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(20px);
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark-l;
+}
+
+.section-p {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: rem(15px);
+    line-height: 160%;
+    color: $color-dark-xl;
+}
+
+.primary-btn {
+    @extend %reset-link-styles;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: rem(17px);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    background: $color-primary;
+    border-radius: rem(100px);
+    padding: rem(15px) rem(45px);
+    transition: $animations-time;
+
+    &:hover {
+        cursor: pointer;
+        background: $color-primary-light;
+    }
+}

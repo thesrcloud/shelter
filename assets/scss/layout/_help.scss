@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+
+.help {
+    @extend %section-padding;
+}
+
+.help__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(60px);
+}
+
+.help__title {
+    width: rem(310px);
+    text-align: center;
+    margin: 0;
+}
+
+.help__content-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(55px) rem(120px);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(30px);
+
+    h3 {
+        margin: 0;
+    }
+}
