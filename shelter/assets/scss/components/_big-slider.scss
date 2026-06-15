@@ -37,10 +37,10 @@
     .bs__button-current {
         background-color: $color-primary;
 
-        &:hover {
-            cursor: default;
-            background-color: $color-primary;
-            border-color: $color-primary;
-        }
+        // &:hover {
+        //     cursor: default;
+        //     background-color: $color-primary;
+        //     border-color: $color-primary;
+        // }
     }
 }
