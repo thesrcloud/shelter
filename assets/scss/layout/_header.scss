@@ -13,6 +13,7 @@
     align-items: center;
     gap: rem(35px);
     list-style: none;
+    color: $color-dark-s;
     padding: 0;
 
     .nav__link {
@@ -22,7 +23,7 @@
         font-size: rem(15px);
         line-height: 160%;
         letter-spacing: rem(0.15px);
-        color: $color-dark-s;
+        color: inherit;
         transition: $animations-time;
 
         &:not(.nav__link--active):hover {
@@ -33,16 +34,20 @@
         &.nav__link--active {
             cursor: default;
             color: $color-light-s;
-            position: relative;
+            border-bottom: rem(3px) solid $color-primary;
+        }
+    }
 
-            &::after {
-                content: '';
-                width: rem(114px);
-                height: rem(3px);
-                background: $color-primary;
-                position: absolute;
-                left: 0;
-                bottom: rem(-3px);
+    &.nav__list--dark {
+        color: $color-dark-l;
+
+        .nav__link {
+            &:not(.nav__link--active):hover {
+                color: $color-dark-3xl;
+            }
+
+            &.nav__link--active {
+                color: $color-dark-3xl;
             }
         }
     }

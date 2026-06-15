@@ -360,6 +360,10 @@ template {
   padding-bottom: 6.25rem;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -429,6 +433,7 @@ body {
   align-items: center;
   gap: 2.1875rem;
   list-style: none;
+  color: #cdcdcd;
   padding: 0;
 }
 .nav__list .nav__link {
@@ -437,7 +442,7 @@ body {
   font-size: 0.9375rem;
   line-height: 160%;
   letter-spacing: 0.009375rem;
-  color: #cdcdcd;
+  color: inherit;
   transition: 0.3s;
 }
 .nav__list .nav__link:not(.nav__link--active):hover {
@@ -447,16 +452,16 @@ body {
 .nav__list .nav__link.nav__link--active {
   cursor: default;
   color: #fafafa;
-  position: relative;
+  border-bottom: 0.1875rem solid #f1cdb3;
 }
-.nav__list .nav__link.nav__link--active::after {
-  content: "";
-  width: 7.125rem;
-  height: 0.1875rem;
-  background: #f1cdb3;
-  position: absolute;
-  left: 0;
-  bottom: -0.1875rem;
+.nav__list.nav__list--dark {
+  color: #545454;
+}
+.nav__list.nav__list--dark .nav__link:not(.nav__link--active):hover {
+  color: #292929;
+}
+.nav__list.nav__list--dark .nav__link.nav__link--active {
+  color: #292929;
 }
 
 .shelter-logo-link {
@@ -486,6 +491,12 @@ body {
 }
 .shelter-logo-link[href="#"]:hover {
   cursor: default;
+}
+.shelter-logo-link .shelter-logo--dark .logo__title {
+  color: #545454;
+}
+.shelter-logo-link .shelter-logo--dark .logo__subtitle {
+  color: #292929;
 }
 
 .first-screen {
@@ -647,6 +658,7 @@ body {
 }
 .card:hover {
   cursor: pointer;
+  background: #fff;
 }
 .card:hover .card__button {
   background: #fddcc4;
@@ -787,6 +799,10 @@ body {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #f1cdb3;
+  transition: 0.3s;
+}
+.footer__link:hover {
+  filter: brightness(150%);
 }
 
 /*# sourceMappingURL=main.css.map */

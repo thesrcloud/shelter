@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+:root {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }

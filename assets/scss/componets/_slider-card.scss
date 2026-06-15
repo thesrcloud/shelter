@@ -19,6 +19,7 @@
 
     &:hover {
         cursor: pointer;
+        background: $color-light-xl;
 
         .card__button {
             background: $color-primary-light;
