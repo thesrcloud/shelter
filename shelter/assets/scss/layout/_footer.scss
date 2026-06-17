@@ -46,7 +46,19 @@
     color: $color-primary;
     transition: $animations-time;
 
+    svg {
+        width: rem(40px);
+    }
+
     &:hover {
         filter: brightness(150%);
     }
+}
+
+.footer__location-image {
+    width: rem(22px);
+}
+
+.footer__image {
+    width: rem(300px);
 }

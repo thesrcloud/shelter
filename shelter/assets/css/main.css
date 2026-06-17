@@ -542,6 +542,10 @@ body {
   color: #cdcdcd;
 }
 
+.not-only__image {
+  width: 43.625rem;
+}
+
 .about__wrapper {
   display: flex;
   justify-content: center;
@@ -561,6 +565,10 @@ body {
 
 .about__title {
   width: 23.125rem;
+}
+
+.about__image {
+  width: 18.75rem;
 }
 
 .our-friends {
@@ -618,6 +626,9 @@ body {
   border: 0.125rem solid #f1cdb3;
   transition: 0.3s;
 }
+.slider__btn svg {
+  width: 0.875rem !important;
+}
 .slider__btn svg path {
   fill: #292929;
 }
@@ -671,6 +682,10 @@ body {
   border-color: #fddcc4;
 }
 
+.card__image {
+  width: 100%;
+}
+
 .help__wrapper {
   display: flex;
   flex-direction: column;
@@ -702,6 +717,9 @@ body {
   align-items: center;
   gap: 1.875rem;
 }
+.help__list-item svg {
+  width: 3.75rem;
+}
 .help__list-item h3 {
   margin: 0;
 }
@@ -717,6 +735,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.875rem;
+}
+
+.addition__image {
+  width: 31.5625rem;
 }
 
 .addition__content-block {
@@ -755,6 +777,9 @@ body {
   border-radius: 9px;
   padding: 0.625rem 0.9375rem;
   color: #545454;
+}
+.addition__link svg {
+  width: 1.875rem;
 }
 
 .donation__description {
@@ -807,8 +832,19 @@ body {
   color: #f1cdb3;
   transition: 0.3s;
 }
+.footer__link svg {
+  width: 2.5rem;
+}
 .footer__link:hover {
   filter: brightness(150%);
+}
+
+.footer__location-image {
+  width: 1.375rem;
+}
+
+.footer__image {
+  width: 18.75rem;
 }
 
 .pets--header .header__wrapper {

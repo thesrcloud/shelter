@@ -37,6 +37,10 @@
     border: rem(2px) solid $color-primary;
     transition: $animations-time;
 
+    svg {
+        width: rem(14px) !important;
+    }
+
     svg path {
         fill: $color-dark-3xl;
     }
