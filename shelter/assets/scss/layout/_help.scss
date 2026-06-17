@@ -35,6 +35,10 @@
     align-items: center;
     gap: rem(30px);
 
+    svg {
+        width: rem(60px);
+    }
+
     h3 {
         margin: 0;
     }
