@@ -10,12 +10,6 @@
 
 body {
     font-family: $font-family;
-
-    @media (max-width: 1280px) {
-        & {
-            width: fit-content;
-        }
-    }
 }
 
 .container {
@@ -67,5 +61,23 @@ body {
     &:hover {
         cursor: pointer;
         background: $color-primary-light;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    .container {
+        padding: 0 rem(30px);
+    }
+}
+
+@media (max-width: 960px) {
+    .d-none-960 {
+        display: none !important;
     }
 }

@@ -24,7 +24,7 @@
     flex-direction: column;
     gap: rem(20px);
 
-    & > * {
+    &>* {
         margin: 0;
     }
 }
@@ -69,4 +69,26 @@
     font-size: rem(12px);
     line-height: 150%;
     color: $color-dark-m;
+}
+
+@media (min-width: 900px) and (max-width: 1040px) {
+    .addition__image {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .addition__wrapper {
+        flex-wrap: wrap;
+        gap: rem(60px);
+    }
+
+    .addition__image {
+        order: 2;
+    }
+
+    .addition__content-block {
+        order: 1;
+    }
 }

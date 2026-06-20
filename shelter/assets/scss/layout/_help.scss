@@ -43,3 +43,38 @@
         margin: 0;
     }
 }
+
+@media (max-width: 1040px) {
+    .help__list-item {
+        width: rem(170px);
+    }
+}
+
+@media (max-width: 890px) {
+
+    .help__content-list {
+        gap: rem(55px) rem(60px);
+    }
+
+    .help__list-item {
+        width: rem(170px);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .help__content-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, rem(130px));
+        gap: rem(30px);
+
+        h3 {
+            font-size: rem(15px);
+        }
+    }
+
+    .help__list-item {
+        width: 100%;
+    }
+}

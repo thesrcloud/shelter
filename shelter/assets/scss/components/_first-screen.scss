@@ -7,3 +7,10 @@
     background: url('../images/noise_transparent@2x.webp'),
         radial-gradient(#5B483A, #262425);
 }
+
+@media (max-width: 820px) {
+
+    .first-screen {
+        gap: rem(60px);
+    }
+}

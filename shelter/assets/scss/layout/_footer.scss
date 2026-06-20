@@ -62,3 +62,35 @@
 .footer__image {
     width: rem(300px);
 }
+
+@media (max-width: 1080px) {
+    .footer__wrapper {
+        gap: rem(50px) rem(100px);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding-top: rem(30px);
+    }
+
+    .footer__wrapper {
+        gap: rem(50px);
+    }
+}
+
+@media (max-width: 800px) {
+    .footer__wrapper {
+        gap: rem(65px) rem(37px);
+    }
+
+    .footer__links-block {
+        padding-top: 0;
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+}
