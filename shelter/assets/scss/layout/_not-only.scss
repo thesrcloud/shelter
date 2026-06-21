@@ -67,3 +67,10 @@
         align-self: flex-end;
     }
 } 
+
+@media (max-width: 650px) {
+
+    .not-only__image {
+        width: 90%;
+    }
+} 

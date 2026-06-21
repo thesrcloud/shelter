@@ -349,7 +349,7 @@ template {
   color: inherit;
 }
 
-.bs__button, .card .card__button, .slider__btn {
+.bs__button, .card .card__button, .slider__btn, .burger-btn {
   outline: none;
   border: none;
   background: transparent;
@@ -480,6 +480,55 @@ body {
   color: #292929;
 }
 
+.burger-btn {
+  display: none;
+  width: 1.875rem;
+  height: 1.375rem;
+  position: relative;
+  border-bottom: 2px solid #f1cdb3;
+}
+.burger-btn.burger-btn--active {
+  transform: rotate(90deg);
+}
+.burger-btn:hover {
+  cursor: pointer;
+}
+.burger-btn::after {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background-color: #f1cdb3;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.burger-btn::before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background-color: #f1cdb3;
+  position: absolute;
+  bottom: calc(50% - 0.125rem);
+  right: 0;
+}
+.burger-btn.burger-btn--black {
+  border-color: #000000;
+}
+.burger-btn.burger-btn--black::after {
+  background-color: #000000;
+}
+.burger-btn.burger-btn--black::before {
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .nav--d-none {
+    display: none;
+  }
+  .burger-btn {
+    display: block;
+  }
+}
 .shelter-logo-link {
   width: fit-content;
 }
@@ -584,6 +633,11 @@ body {
   .not-only__image {
     width: 35.5625rem;
     align-self: flex-end;
+  }
+}
+@media (max-width: 650px) {
+  .not-only__image {
+    width: 90%;
   }
 }
 .about__wrapper {
@@ -927,6 +981,11 @@ body {
   }
   .addition__content-block {
     order: 1;
+  }
+}
+@media (max-width: 650px) {
+  .addition__image {
+    width: 90%;
   }
 }
 .footer {
