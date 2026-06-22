@@ -50,8 +50,15 @@
         width: rem(40px);
     }
 
-    &:hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            filter: brightness(150%);
+        }
+    }
+
+    &:active {
         filter: brightness(150%);
+        transform: scale(0.9);
     }
 }
 
