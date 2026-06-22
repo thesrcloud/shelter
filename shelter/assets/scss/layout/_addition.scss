@@ -95,15 +95,51 @@
 
 @media (max-width: 650px) {
 
-    .addition__wrapper {
-        
-    }
+    .addition__wrapper {}
 
     .addition__image {
         width: 90%;
     }
 
+    .addition__content-block {}
+}
+
+@media(max-width: 420px) {
+    .addition {
+        padding-top: rem(40px);
+        padding-bottom: rem(42px);
+    }
+
+    .addition__wrapper {
+        gap: rem(42px);
+    }
+
+    .addition__image {
+        width: 87%;
+    }
+
+    .addition__title {
+        width: 100%;
+    }
+
     .addition__content-block {
-        
+        align-items: center;
+        gap: rem(21px);
+    }
+
+    .addition__card-name {
+        font-size: rem(13px);
+        line-height: 160%;
+    }
+
+    .addition__link {
+        font-size: rem(15px);
+        line-height: 110%;
+        letter-spacing: 0.06em;
+    }
+
+    .donation__description {
+        text-align: justify;
+        padding: 0 rem(10px);
     }
 }

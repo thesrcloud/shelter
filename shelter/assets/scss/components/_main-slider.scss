@@ -149,3 +149,9 @@
         order: 3;
     }
 }
+
+@media (max-width: 420px) {
+    .slider {
+        gap: rem(20px) rem(80px);
+    }
+}
