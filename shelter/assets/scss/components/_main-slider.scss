@@ -46,17 +46,19 @@
         fill: $color-dark-3xl;
     }
 
-    &:not(.btn-inactive):hover {
-        cursor: pointer;
-        background-color: $color-primary-light;
-        border-color: $color-primary-light;
+    @media (hover: hover) and (pointer: fine) {
+        &:not(.btn-inactive):hover {
+            cursor: pointer;
+            background-color: $color-primary-light;
+            border-color: $color-primary-light;
+        }
     }
 
     &:not(.btn-inactive):active {
         cursor: pointer;
         background-color: $color-primary-light;
         border-color: $color-primary-light;
-        transform: scale(0.95);
+        transform: scale(0.8);
     }
 
     &.btn-inactive {
@@ -84,8 +86,7 @@
         width: 84%;
     }
 
-    .slider__carousel {
-    }
+    .slider__carousel {}
 
     .slider__card-block {
         // width: 100%;

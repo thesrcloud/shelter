@@ -26,9 +26,15 @@
         color: inherit;
         transition: $animations-time;
 
-        &:not(.nav__link--active):hover {
-            cursor: pointer;
-            color: $color-light-s;
+        @media (hover: hover) and (pointer: fine) {
+            &:not(.nav__link--active):hover {
+                cursor: pointer;
+                color: $color-light-s;
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
         }
 
         &.nav__link--active {
@@ -60,13 +66,20 @@
     height: rem(22px);
     position: relative;
     border-bottom: 2px solid $color-primary;
+    transition: $animations-time;
 
     &.burger-btn--active {
         transform: rotate(90deg);
     }
 
-    &:hover {
-        cursor: pointer;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:active {
+        transform: scale(0.8);
     }
 
     &::after {

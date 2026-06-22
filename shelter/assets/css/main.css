@@ -368,6 +368,7 @@ template {
 }
 :root {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
@@ -424,9 +425,14 @@ body {
   padding: 0.9375rem 2.8125rem;
   transition: 0.3s;
 }
-.primary-btn:hover {
-  cursor: pointer;
-  background: #fddcc4;
+@media (hover: hover) and (pointer: fine) {
+  .primary-btn:hover {
+    cursor: pointer;
+    background: #fddcc4;
+  }
+}
+.primary-btn:active {
+  transform: scale(0.85);
 }
 
 @media (max-width: 1280px) {
@@ -526,9 +532,14 @@ body {
   color: inherit;
   transition: 0.3s;
 }
-.nav__list .nav__link:not(.nav__link--active):hover {
-  cursor: pointer;
-  color: #fafafa;
+@media (hover: hover) and (pointer: fine) {
+  .nav__list .nav__link:not(.nav__link--active):hover {
+    cursor: pointer;
+    color: #fafafa;
+  }
+}
+.nav__list .nav__link:active {
+  transform: scale(0.9);
 }
 .nav__list .nav__link.nav__link--active {
   cursor: default;
@@ -551,12 +562,18 @@ body {
   height: 1.375rem;
   position: relative;
   border-bottom: 2px solid #f1cdb3;
+  transition: 0.3s;
 }
 .burger-btn.burger-btn--active {
   transform: rotate(90deg);
 }
-.burger-btn:hover {
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .burger-btn:hover {
+    cursor: pointer;
+  }
+}
+.burger-btn:active {
+  transform: scale(0.8);
 }
 .burger-btn::after {
   content: "";
@@ -880,16 +897,18 @@ body {
 .slider__btn svg path {
   fill: #292929;
 }
-.slider__btn:not(.btn-inactive):hover {
-  cursor: pointer;
-  background-color: #fddcc4;
-  border-color: #fddcc4;
+@media (hover: hover) and (pointer: fine) {
+  .slider__btn:not(.btn-inactive):hover {
+    cursor: pointer;
+    background-color: #fddcc4;
+    border-color: #fddcc4;
+  }
 }
 .slider__btn:not(.btn-inactive):active {
   cursor: pointer;
   background-color: #fddcc4;
   border-color: #fddcc4;
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 .slider__btn.btn-inactive {
   border-color: #cdcdcd;
@@ -976,17 +995,27 @@ body {
   border-radius: 0.5625rem;
   overflow: clip;
   background: #fafafa;
+  transition: 0.3s;
 }
 .card .card__button {
   border: 0.125rem solid #f1cdb3;
   padding: 0.75rem 2.75rem;
 }
-.card:hover {
-  cursor: pointer;
-  background: #fff;
-  box-shadow: 0 0.125rem 2.1875rem 0.875rem rgba(13, 13, 13, 0.04);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 0.125rem 2.1875rem 0.875rem rgba(13, 13, 13, 0.04);
+  }
+  .card:hover .card__button {
+    background: #fddcc4;
+    border-color: #fddcc4;
+  }
 }
-.card:hover .card__button {
+.card:active {
+  transform: scale(0.95);
+}
+.card:active .card__button {
   background: #fddcc4;
   border-color: #fddcc4;
 }
@@ -1253,8 +1282,14 @@ body {
 .footer__link svg {
   width: 2.5rem;
 }
-.footer__link:hover {
+@media (hover: hover) and (pointer: fine) {
+  .footer__link:hover {
+    filter: brightness(150%);
+  }
+}
+.footer__link:active {
   filter: brightness(150%);
+  transform: scale(0.9);
 }
 
 .footer__location-image {
@@ -1351,16 +1386,18 @@ body {
 .bs__button svg path {
   fill: #292929;
 }
-.bs__button:not(.btn-inactive):hover {
-  cursor: pointer;
-  background-color: #fddcc4;
-  border-color: #fddcc4;
+@media (hover: hover) and (pointer: fine) {
+  .bs__button:not(.btn-inactive):hover {
+    cursor: pointer;
+    background-color: #fddcc4;
+    border-color: #fddcc4;
+  }
 }
 .bs__button:not(.btn-inactive):active {
   cursor: pointer;
   background-color: #fddcc4;
   border-color: #fddcc4;
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 .bs__button.btn-inactive {
   border-color: #cdcdcd;

@@ -10,6 +10,7 @@
     border-radius: rem(9px);
     overflow: clip;
     background: $color-light-s;
+    transition: $animations-time;
 
     & .card__button {
         @extend %reset-btn-styles;
@@ -17,10 +18,21 @@
         padding: rem(12px) rem(44px);
     }
 
-    &:hover {
-        cursor: pointer;
-        background: $color-light-xl;
-        box-shadow: 0 rem(2px) rem(35px) rem(14px) rgba(13, 13, 13, 0.04);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            cursor: pointer;
+            background: $color-light-xl;
+            box-shadow: 0 rem(2px) rem(35px) rem(14px) rgba(13, 13, 13, 0.04);
+
+            .card__button {
+                background: $color-primary-light;
+                border-color: $color-primary-light;
+            }
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
 
         .card__button {
             background: $color-primary-light;
