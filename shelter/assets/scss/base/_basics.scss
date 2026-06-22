@@ -10,12 +10,6 @@
 
 body {
     font-family: $font-family;
-
-    @media (max-width: 1280px) {
-        & {
-            width: fit-content;
-        }
-    }
 }
 
 .container {
@@ -67,5 +61,47 @@ body {
     &:hover {
         cursor: pointer;
         background: $color-primary-light;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    .container {
+        padding: 0 rem(30px);
+    }
+}
+
+@media (max-width: 960px) {
+    .d-none-960 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 610px) {
+    .d-none-610 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 510px) {
+    .container {
+        padding: 0 rem(20px);
+    }
+}
+
+@media (max-width: 470px) {
+    .container {
+        padding: 0 rem(10px);
+    }
+}
+
+@media(max-width: 949px) {
+    .d-none-950 {
+        display: none !important;
     }
 }
