@@ -360,6 +360,12 @@ template {
   padding-bottom: 6.25rem;
 }
 
+@media (max-width: 420px) {
+  .pets, .addition, .help, .our-friends, .about {
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+  }
+}
 :root {
   scroll-behavior: smooth;
 }
@@ -370,6 +376,7 @@ template {
 
 body {
   font-family: "Georgia", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -455,6 +462,39 @@ body {
 @media (max-width: 949px) {
   .d-none-950 {
     display: none !important;
+  }
+}
+@media (max-width: 420px) {
+  .section-title {
+    width: 14.0625rem !important;
+    font-size: 1.5625rem;
+    text-align: center;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 300px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 250px) {
+  :root {
+    font-size: 11px;
+  }
+}
+@media (max-width: 210px) {
+  :root {
+    font-size: 8px;
+  }
+}
+@media (max-width: 170px) {
+  :root {
+    font-size: 6px;
+  }
+}
+@media (max-width: 110px) {
+  :root {
+    font-size: 4px;
   }
 }
 .header__wrapper {
@@ -547,6 +587,11 @@ body {
   }
   .burger-btn {
     display: block;
+  }
+}
+@media (max-width: 420px) {
+  .header__wrapper {
+    padding: 0 1.25rem;
   }
 }
 .shelter-logo-link {
@@ -668,6 +713,43 @@ body {
     width: 90%;
   }
 }
+@media (min-width: 420px) and (max-width: 670px) {
+  .not-only__content-block {
+    align-items: center;
+  }
+  .not-only__description {
+    width: 80%;
+  }
+}
+@media (min-width: 330px) and (max-width: 420px) {
+  .not-only__content-block {
+    align-items: center;
+  }
+  .not-only__title {
+    font-size: 1.75rem !important;
+  }
+  .not-only__description {
+    width: 80%;
+    text-align: center !important;
+  }
+}
+@media (max-width: 420px) {
+  .not-only__wrapper {
+    gap: 4.9375rem;
+  }
+  .not-only__title {
+    width: 18.75rem;
+    font-size: 1.5625rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+  .not-only__description {
+    text-align: center;
+  }
+  .not-only__image {
+    width: 87%;
+  }
+}
 .about__wrapper {
   display: flex;
   justify-content: center;
@@ -698,7 +780,7 @@ body {
     gap: 4.375rem;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 870px) {
   .about__wrapper {
     flex-wrap: wrap;
     gap: 4.9375rem;
@@ -708,6 +790,19 @@ body {
   }
   .about__image {
     order: 2;
+  }
+}
+@media (max-width: 420px) {
+  .about__wrapper {
+    padding: 0 1.5625rem;
+    text-align: justify;
+    gap: 2.5rem;
+  }
+  .about__content-block {
+    gap: 1.4375rem;
+  }
+  .about__image {
+    width: 97%;
   }
 }
 .our-friends {
@@ -729,6 +824,14 @@ body {
   text-align: center;
 }
 
+@media (max-width: 420px) {
+  .our-friends__wrapper {
+    gap: 2.5rem;
+  }
+  .our-friends__title {
+    width: 100% !important;
+  }
+}
 .slider {
   width: 100%;
   display: flex;
@@ -853,6 +956,11 @@ body {
     order: 3;
   }
 }
+@media (max-width: 420px) {
+  .slider {
+    gap: 1.25rem 5rem;
+  }
+}
 .card {
   width: 16.875rem;
   height: 27.1875rem;
@@ -964,6 +1072,17 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 420px) {
+  .help__wrapper {
+    gap: 2.625rem;
+  }
+  .help__list-item {
+    gap: 1.25rem;
+  }
+  .help__list-item svg {
+    width: 3.125rem;
+  }
+}
 .addition {
   padding-top: 4.875rem;
   padding-bottom: 6.1875rem;
@@ -1053,6 +1172,38 @@ body {
     width: 90%;
   }
 }
+@media (max-width: 420px) {
+  .addition {
+    padding-top: 2.5rem;
+    padding-bottom: 2.625rem;
+  }
+  .addition__wrapper {
+    gap: 2.625rem;
+  }
+  .addition__image {
+    width: 87%;
+  }
+  .addition__title {
+    width: 100%;
+  }
+  .addition__content-block {
+    align-items: center;
+    gap: 1.3125rem;
+  }
+  .addition__card-name {
+    font-size: 0.8125rem;
+    line-height: 160%;
+  }
+  .addition__link {
+    font-size: 0.9375rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+  .donation__description {
+    text-align: justify;
+    padding: 0 0.625rem;
+  }
+}
 .footer {
   padding-top: 2.5rem;
   background: url("../images/noise_transparent@2x.webp"), radial-gradient(circle at top left, #5B483A, #262425);
@@ -1133,6 +1284,27 @@ body {
   }
   .footer__links-block:nth-child(2) {
     margin-right: 0;
+  }
+}
+@media (max-width: 420px) {
+  .footer__wrapper {
+    gap: 2.5rem;
+  }
+  .footer__links-block:first-child {
+    align-items: center;
+  }
+  .footer__links-block {
+    align-items: center;
+  }
+  .footer__links-block-second {
+    align-items: flex-start;
+    gap: 2.5rem !important;
+  }
+  .footer__links-block-second h2 {
+    width: 90% !important;
+  }
+  .footer__image {
+    width: 87%;
   }
 }
 .pets--header .header__wrapper {

@@ -78,3 +78,17 @@
         width: 100%;
     }
 }
+
+@media (max-width: 420px) {
+    .help__wrapper {
+        gap: rem(42px);
+    }
+
+    .help__list-item {
+        gap: rem(20px);
+
+        & svg {
+            width: rem(50px);
+        }
+    }
+}

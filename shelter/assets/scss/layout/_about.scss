@@ -40,7 +40,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 870px) {
     .about__wrapper {
         flex-wrap: wrap;
         gap: rem(79px);
@@ -52,5 +52,21 @@
 
     .about__image {
         order: 2;
+    }
+}
+
+@media(max-width: 420px) {
+    .about__wrapper {
+        padding: 0 rem(25px);
+        text-align: justify;
+        gap: rem(40px);
+    }
+
+    .about__content-block {
+        gap: rem(23px);
+    }
+
+    .about__image {
+        width: 97%;
     }
 }

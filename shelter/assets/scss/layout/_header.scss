@@ -111,3 +111,10 @@
         display: block;
     }
 }
+
+@media (max-width: 420px) {
+
+    .header__wrapper {
+        padding: 0 rem(20px);
+    }
+}
