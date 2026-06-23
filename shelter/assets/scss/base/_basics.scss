@@ -72,6 +72,22 @@ body {
     }
 }
 
+.d-show {
+    display: block;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.overflow-dis {
+    overflow: hidden !important;
+}
+
 @media (max-width: 1280px) {
     .container {
         width: 100%;

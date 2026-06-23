@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+@keyframes open-menu {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    } 
+}
+
+.open-menu {
+    animation-name: open-menu;
+    animation-timing-function: ease;
+    animation-duration: $animations-time;
+}
+
+.close-menu {
+    animation-name: open-menu;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+    animation-duration: $animations-time;
+}
