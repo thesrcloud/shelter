@@ -17,3 +17,10 @@
     padding-top: rem(80px);
     padding-bottom: rem(100px);
 }
+
+@media (max-width: 420px) {
+    %section-padding {
+        padding-top: rem(42px);
+        padding-bottom: rem(42px);
+    }
+}

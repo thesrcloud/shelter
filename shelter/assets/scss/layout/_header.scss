@@ -26,9 +26,15 @@
         color: inherit;
         transition: $animations-time;
 
-        &:not(.nav__link--active):hover {
-            cursor: pointer;
-            color: $color-light-s;
+        @media (hover: hover) and (pointer: fine) {
+            &:not(.nav__link--active):hover {
+                cursor: pointer;
+                color: $color-light-s;
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
         }
 
         &.nav__link--active {
@@ -50,5 +56,108 @@
                 color: $color-dark-3xl;
             }
         }
+    }
+}
+
+.burger-btn {
+    @extend %reset-btn-styles;
+    display: none;
+    width: rem(30px);
+    height: rem(22px);
+    position: relative;
+    border-bottom: 2px solid $color-primary;
+    transition: $animations-time;
+
+    &.burger-btn--active {
+        transform: rotate(90deg);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: rem(2px);
+        background-color: $color-primary;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: rem(2px);
+        background-color: $color-primary;
+        position: absolute;
+        bottom: calc(50% - rem(2px));
+        right: 0;
+    }
+
+    &.burger-btn--black {
+        border-color: $color-black;
+
+        &::after {
+            background-color: $color-black;
+        }
+
+        &::before {
+            background-color: $color-black;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+
+    .nav {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0;
+        right: 0;
+    }
+
+    .nav__list {
+        width: rem(320px);
+        height: 100%;
+        background-color: $color-dark-3xl;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: clamp(rem(39px), rem(39px) + 1vh, 5vh);
+
+        .nav__link    {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            color: var(--color-light-s);
+        }
+    }
+
+    .nav--d-none {
+        display: none;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .header__wrapper {
+        padding: 0 rem(20px);
     }
 }

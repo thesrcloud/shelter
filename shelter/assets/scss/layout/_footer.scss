@@ -50,8 +50,15 @@
         width: rem(40px);
     }
 
-    &:hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            filter: brightness(150%);
+        }
+    }
+
+    &:active {
         filter: brightness(150%);
+        transform: scale(0.9);
     }
 }
 
@@ -92,5 +99,33 @@
         &:nth-child(2) {
             margin-right: 0;
         }
+    }
+}
+
+@media (max-width: 420px) {
+
+    .footer__wrapper {
+        gap: rem(40px);
+    }
+
+    .footer__links-block:first-child {
+        align-items: center;
+    }
+
+    .footer__links-block {
+        align-items: center;
+    }
+
+    .footer__links-block-second {
+        align-items: flex-start;
+        gap: rem(40px) !important;
+
+        h2 {
+            width: 90% !important;
+        }
+    }
+
+    .footer__image {
+        width: 87%;
     }
 }
