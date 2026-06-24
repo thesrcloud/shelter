@@ -602,14 +602,14 @@ body {
   transition: 0.3s;
 }
 .burger-btn.burger-btn--active {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 @media (hover: hover) and (pointer: fine) {
   .burger-btn:hover {
     cursor: pointer;
   }
 }
-.burger-btn:active {
+.burger-btn:not(.burger-btn--active):active {
   transform: scale(0.8);
 }
 .burger-btn::after {
@@ -647,7 +647,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
+    position: fixed;
     background: rgba(0, 0, 0, 0.7);
     top: 0;
     right: 0;
