@@ -1,0 +1,237 @@
+@use '../abstracts/' as *;
+
+.popup {
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(41, 41, 41, 0.6);
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.popup__content {
+	width: rem(900px);
+	min-height: rem(500px);
+	display: flex;
+	gap: rem(29px);
+	background: $color-light-s;
+	border-radius: rem(9px);
+	position: relative;
+
+	.popup__picture {
+		width: rem(500px);
+		border-radius: rem(9px) 0 0 rem(9px);
+		object-fit: cover;
+	}
+
+	.popup__info-block {
+		width: rem(351px);
+		display: flex;
+		flex-direction: column;
+		margin-top: rem(50px);
+		padding-bottom: rem(20px);
+
+
+		.popup__pet-name {
+			color: $color-black;
+			margin: 0;
+		}
+
+		.popup__pet-type {
+			color: $color-black;
+			text-align: left;
+			margin-top: rem(10px);
+		}
+
+		.popup__description {
+			font-family: $font-family;
+			font-weight: 400;
+			font-size: rem(15px);
+			line-height: 110%;
+			letter-spacing: 0.06em;
+			color: $color-black;
+			margin: rem(40px) 0;
+		}
+
+		.popup__info-list {
+			display: flex;
+			flex-direction: column;
+			gap: rem(11px);
+			padding-left: rem(15px);
+			margin: 0;
+			margin-top: rem(5px);
+
+			li {
+				font-family: $font-family;
+				font-weight: 700;
+				font-size: rem(15px);
+				line-height: 110%;
+				letter-spacing: rem(1.5px);
+				color: $color-black;
+
+				span {
+					font-weight: 400;
+				}
+			}
+
+			li::marker {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.popup__btn-close {
+		@extend %reset-btn-styles;
+		width: rem(52px);
+		height: rem(52px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		border: rem(2px) solid $color-primary;
+		position: absolute;
+		top: rem(-52px);
+		right: rem(-42px);
+		transition: $animations-time;
+
+		svg {
+			width: rem(12px);
+			height: rem(12px);
+			fill: $color-dark-3xl;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				cursor: pointer;
+				background-color: $color-primary-light;
+				border-color: $color-primary-light;
+			}
+		}
+
+		&:active {
+			cursor: pointer;
+			background-color: $color-primary-light;
+			border-color: $color-primary-light;
+			transform: scale(0.8);
+		}
+
+		&.btn-close--active {
+			background-color: $color-primary-light;
+			border-color: $color-primary-light;
+		}
+	}
+}
+
+@media(max-width: 1060px) {
+	.popup__content {
+		width: 75%;
+		min-height: rem(350px);
+		gap: rem(0);
+		align-items: center;
+
+		.popup__picture {
+			width: 50%;
+			align-self: normal;
+		}
+
+		.popup__info-block {
+			width: 50%;
+			height: fit-content;
+			margin-top: rem(0);
+			padding: rem(15px);
+
+			.popup__description {
+				font-size: rem(13px);
+				line-height: 110%;
+				letter-spacing: 0.06em;
+				margin: rem(20px) 0;
+			}
+
+			.popup__info-list {
+				display: flex;
+				flex-direction: column;
+				gap: rem(5px);
+				padding-left: rem(15px);
+				margin: 0;
+				margin-top: rem(0);
+				justify-self: flex-end;
+
+				li {
+					font-family: $font-family;
+					font-weight: 700;
+					font-size: rem(15px);
+					line-height: 110%;
+					letter-spacing: rem(1.5px);
+					color: $color-black;
+
+					span {
+						font-weight: 400;
+					}
+				}
+
+				li::marker {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 650px) {
+	.popup__content {
+		width: rem(240px);
+		min-height: rem(341px);
+		gap: rem(10px);
+		padding: rem(10px);
+
+		.popup__picture {
+			display: none;
+		}
+
+		.popup__info-block {
+			width: rem(260px);
+			padding: rem(10px);
+
+			.popup__description {
+				font-size: rem(13px);
+				line-height: 110%;
+				letter-spacing: 0.06em;
+				margin: rem(20px) 0;
+			}
+
+			.popup__info-list {
+				display: flex;
+				flex-direction: column;
+				gap: rem(5px);
+				padding-left: rem(15px);
+				margin: 0;
+				margin-top: rem(0);
+
+				li {
+					font-family: $font-family;
+					font-weight: 700;
+					font-size: rem(15px);
+					line-height: 110%;
+					letter-spacing: rem(1.5px);
+					color: $color-black;
+
+					span {
+						font-weight: 400;
+					}
+				}
+
+				li::marker {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	.popup__btn-close {
+		top: rem(-52px) !important;
+		right: rem(-32px) !important;
+	}
+}

@@ -349,7 +349,7 @@ template {
   color: inherit;
 }
 
-.bs__button, .card .card__button, .slider__btn, .burger-btn {
+.popup__content .popup__btn-close, .bs__button, .card .card__button, .slider__btn, .burger-btn {
   outline: none;
   border: none;
   background: transparent;
@@ -374,6 +374,22 @@ template {
     transform: translateX(0%);
   }
 }
+@keyframes move-right {
+  from {
+    transform: translateX(-105%);
+  }
+  to {
+    transform: translateX(-210%);
+  }
+}
+@keyframes move-left {
+  from {
+    transform: translateX(-105%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 .open-menu {
   animation-name: open-menu;
   animation-timing-function: ease;
@@ -385,6 +401,18 @@ template {
   animation-timing-function: ease-out;
   animation-direction: reverse;
   animation-duration: 0.3s;
+}
+
+.move-right {
+  animation-name: move-right;
+  animation-timing-function: ease;
+  animation-duration: 0.7s;
+}
+
+.move-left {
+  animation-name: move-left;
+  animation-timing-function: ease;
+  animation-duration: 0.7s;
 }
 
 :root {
@@ -933,9 +961,10 @@ body {
 }
 
 .slider__carousel {
-  width: 300%;
+  width: 100%;
   display: flex;
-  transform: translateX(-100%);
+  transform: translateX(-105%);
+  gap: 5%;
 }
 
 .slider__card-block {
@@ -1005,11 +1034,12 @@ body {
 }
 @media (max-width: 960px) {
   .slider__cards {
-    width: fit-content;
+    width: 80%;
     min-height: fit-content;
   }
   .slider__card-block {
     gap: 2.5rem;
+    justify-content: center;
   }
 }
 @media (min-width: 611px) and (max-width: 767px) {
@@ -1085,6 +1115,8 @@ body {
 
 .card__image {
   width: 100%;
+  height: 16.875rem;
+  object-fit: cover;
 }
 
 @media (min-width: 961px) and (max-width: 1170px) {
@@ -1093,6 +1125,10 @@ body {
     height: fit-content;
     padding-bottom: 4%;
   }
+  .card .card__image {
+    height: 15.625rem;
+    object-fit: cover;
+  }
 }
 @media (min-width: 611px) and (max-width: 767px) {
   .card {
@@ -1100,8 +1136,12 @@ body {
     height: fit-content;
     padding-bottom: 4%;
   }
+  .card .card__image {
+    height: 12.5rem;
+    object-fit: cover;
+  }
   .card__button {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 .help__wrapper {
@@ -1589,6 +1629,209 @@ body {
 @media (max-width: 780px) {
   .pets__wrapper {
     gap: 1.875rem;
+  }
+}
+.popup {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.popup__content {
+  width: 56.25rem;
+  min-height: 31.25rem;
+  display: flex;
+  gap: 1.8125rem;
+  background: #fafafa;
+  border-radius: 0.5625rem;
+  position: relative;
+}
+.popup__content .popup__picture {
+  width: 31.25rem;
+  border-radius: 0.5625rem 0 0 0.5625rem;
+  object-fit: cover;
+}
+.popup__content .popup__info-block {
+  width: 21.9375rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.125rem;
+  padding-bottom: 1.25rem;
+}
+.popup__content .popup__info-block .popup__pet-name {
+  color: #000000;
+  margin: 0;
+}
+.popup__content .popup__info-block .popup__pet-type {
+  color: #000000;
+  text-align: left;
+  margin-top: 0.625rem;
+}
+.popup__content .popup__info-block .popup__description {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin: 2.5rem 0;
+}
+.popup__content .popup__info-block .popup__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6875rem;
+  padding-left: 0.9375rem;
+  margin: 0;
+  margin-top: 0.3125rem;
+}
+.popup__content .popup__info-block .popup__info-list li {
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 110%;
+  letter-spacing: 0.09375rem;
+  color: #000000;
+}
+.popup__content .popup__info-block .popup__info-list li span {
+  font-weight: 400;
+}
+.popup__content .popup__info-block .popup__info-list li::marker {
+  color: #f1cdb3;
+}
+.popup__content .popup__btn-close {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.125rem solid #f1cdb3;
+  position: absolute;
+  top: -3.25rem;
+  right: -2.625rem;
+  transition: 0.3s;
+}
+.popup__content .popup__btn-close svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: #292929;
+}
+@media (hover: hover) and (pointer: fine) {
+  .popup__content .popup__btn-close:hover {
+    cursor: pointer;
+    background-color: #fddcc4;
+    border-color: #fddcc4;
+  }
+}
+.popup__content .popup__btn-close:active {
+  cursor: pointer;
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+  transform: scale(0.8);
+}
+.popup__content .popup__btn-close.btn-close--active {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
+@media (max-width: 1060px) {
+  .popup__content {
+    width: 75%;
+    min-height: 21.875rem;
+    gap: 0rem;
+    align-items: center;
+  }
+  .popup__content .popup__picture {
+    width: 50%;
+    align-self: normal;
+  }
+  .popup__content .popup__info-block {
+    width: 50%;
+    height: fit-content;
+    margin-top: 0rem;
+    padding: 0.9375rem;
+  }
+  .popup__content .popup__info-block .popup__description {
+    font-size: 0.8125rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin: 1.25rem 0;
+  }
+  .popup__content .popup__info-block .popup__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    padding-left: 0.9375rem;
+    margin: 0;
+    margin-top: 0rem;
+    justify-self: flex-end;
+  }
+  .popup__content .popup__info-block .popup__info-list li {
+    font-family: "Georgia", sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 110%;
+    letter-spacing: 0.09375rem;
+    color: #000000;
+  }
+  .popup__content .popup__info-block .popup__info-list li span {
+    font-weight: 400;
+  }
+  .popup__content .popup__info-block .popup__info-list li::marker {
+    color: #f1cdb3;
+  }
+}
+@media (max-width: 650px) {
+  .popup__content {
+    width: 15rem;
+    min-height: 21.3125rem;
+    gap: 0.625rem;
+    padding: 0.625rem;
+  }
+  .popup__content .popup__picture {
+    display: none;
+  }
+  .popup__content .popup__info-block {
+    width: 16.25rem;
+    padding: 0.625rem;
+  }
+  .popup__content .popup__info-block .popup__description {
+    font-size: 0.8125rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin: 1.25rem 0;
+  }
+  .popup__content .popup__info-block .popup__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    padding-left: 0.9375rem;
+    margin: 0;
+    margin-top: 0rem;
+  }
+  .popup__content .popup__info-block .popup__info-list li {
+    font-family: "Georgia", sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 110%;
+    letter-spacing: 0.09375rem;
+    color: #000000;
+  }
+  .popup__content .popup__info-block .popup__info-list li span {
+    font-weight: 400;
+  }
+  .popup__content .popup__info-block .popup__info-list li::marker {
+    color: #f1cdb3;
+  }
+  .popup__btn-close {
+    top: -3.25rem !important;
+    right: -2rem !important;
   }
 }
 

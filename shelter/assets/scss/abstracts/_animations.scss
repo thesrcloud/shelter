@@ -7,7 +7,27 @@
 
     to {
         transform: translateX(0%);
-    } 
+    }
+}
+
+@keyframes move-right {
+    from {
+        transform: translateX(-105%);
+    }
+
+    to {
+        transform: translateX(-210%);
+    }
+}
+
+@keyframes move-left {
+    from {
+        transform: translateX(-105%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 .open-menu {
@@ -21,4 +41,16 @@
     animation-timing-function: ease-out;
     animation-direction: reverse;
     animation-duration: $animations-time;
+}
+
+.move-right {
+    animation-name: move-right;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
+}
+
+.move-left {
+    animation-name: move-left;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
 }

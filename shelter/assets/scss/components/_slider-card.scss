@@ -43,6 +43,8 @@
 
 .card__image {
     width: 100%;
+    height: rem(270px);
+    object-fit: cover;
 }
 
 @media (min-width: 961px) and (max-width: 1170px) {
@@ -50,7 +52,13 @@
         width: 31%;
         height: fit-content;
         padding-bottom: 4%;
+
+        .card__image {
+            height: rem(250px);
+            object-fit: cover;
+        }
     }
+
 }
 
 @media (min-width: 611px) and (max-width: 767px) {
@@ -58,9 +66,14 @@
         width: 42%;
         height: fit-content;
         padding-bottom: 4%;
+
+        .card__image {
+            height: rem(200px);
+            object-fit: cover
+        }
     }
 
     .card__button {
-        font-size: rem(14px);
+        font-size: rem(12px);
     }
 }
