@@ -16,9 +16,10 @@
 }
 
 .slider__carousel {
-    width: 300%;
+    width: 100%;
     display: flex;
-    transform: translateX(-100%);
+    transform: translateX(-105%);
+    gap: 5%;
 }
 
 .slider__card-block {
@@ -104,12 +105,13 @@
 
 @media (max-width: 960px) {
     .slider__cards {
-        width: fit-content;
+        width: 80%;
         min-height: fit-content;
     }
 
     .slider__card-block {
         gap: rem(40px);
+        justify-content: center;
     }
 }
 
