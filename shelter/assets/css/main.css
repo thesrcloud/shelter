@@ -598,7 +598,7 @@ body {
   width: 1.875rem;
   height: 1.375rem;
   position: relative;
-  border-bottom: 2px solid #f1cdb3;
+  border-bottom: 0.125rem solid #f1cdb3;
   transition: 0.3s;
 }
 .burger-btn.burger-btn--active {
@@ -663,7 +663,7 @@ body {
   }
   .nav__list .nav__link {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 160%;
     color: var(--color-light-s);
   }
@@ -1413,6 +1413,39 @@ body {
 .pets--header .header__wrapper {
   min-height: 7.5rem;
   margin-top: 0;
+}
+@media (max-width: 767px) {
+  .pets--header .pets--menu-767 {
+    z-index: 1;
+  }
+  .pets--header .pets--menu-767 .nav__link {
+    color: #cdcdcd;
+  }
+}
+@media (max-width: 767px) and (hover: hover) and (pointer: fine) {
+  .pets--header .pets--menu-767 .nav__link:not(.nav__link--active):hover {
+    cursor: pointer;
+    color: #fafafa;
+  }
+}
+@media (max-width: 767px) {
+  .pets--header .pets--menu-767 .nav__link.nav__link--active {
+    cursor: default;
+    color: #fafafa;
+    border-bottom: 0.1875rem solid #f1cdb3;
+  }
+  .pets--header .burger-btn--black {
+    z-index: 2;
+  }
+  .pets--header .burger-btn--active {
+    border-bottom: 0.125rem solid #f1cdb3;
+  }
+  .pets--header .burger-btn--active::after {
+    background-color: #f1cdb3;
+  }
+  .pets--header .burger-btn--active::before {
+    background-color: #f1cdb3;
+  }
 }
 
 .pets {

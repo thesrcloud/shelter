@@ -65,7 +65,7 @@
     width: rem(30px);
     height: rem(22px);
     position: relative;
-    border-bottom: 2px solid $color-primary;
+    border-bottom: rem(2px) solid $color-primary;
     transition: $animations-time;
 
     &.burger-btn--active {
@@ -140,7 +140,7 @@
 
         .nav__link {
             font-weight: 400;
-            font-size: 32px;
+            font-size: rem(32px);
             line-height: 160%;
             color: var(--color-light-s);
         }
