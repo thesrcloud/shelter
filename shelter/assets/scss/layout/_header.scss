@@ -65,11 +65,11 @@
     width: rem(30px);
     height: rem(22px);
     position: relative;
-    border-bottom: 2px solid $color-primary;
+    border-bottom: rem(2px) solid $color-primary;
     transition: $animations-time;
 
     &.burger-btn--active {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -78,7 +78,7 @@
         }
     }
 
-    &:active {
+    &:not(.burger-btn--active):active {
         transform: scale(0.8);
     }
 
@@ -123,7 +123,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        position: absolute;
+        position: fixed;
         background: rgba(0, 0, 0, 0.7);
         top: 0;
         right: 0;
@@ -138,9 +138,9 @@
         justify-content: center;
         gap: clamp(rem(39px), rem(39px) + 1vh, 5vh);
 
-        .nav__link    {
+        .nav__link {
             font-weight: 400;
-            font-size: 32px;
+            font-size: rem(32px);
             line-height: 160%;
             color: var(--color-light-s);
         }
