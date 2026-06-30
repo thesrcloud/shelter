@@ -390,6 +390,22 @@ template {
     transform: translateX(0%);
   }
 }
+@keyframes fade-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fade-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 .open-menu {
   animation-name: open-menu;
   animation-timing-function: ease;
@@ -413,6 +429,18 @@ template {
   animation-name: move-left;
   animation-timing-function: ease;
   animation-duration: 0.7s;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
 }
 
 :root {
@@ -1643,6 +1671,12 @@ body {
   right: 0;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .popup:hover:not(:has(.popup__content:hover)) .popup__btn-close {
+    background-color: #fddcc4;
+    border-color: #fddcc4;
+  }
+}
 .popup__content {
   width: 56.25rem;
   min-height: 31.25rem;
