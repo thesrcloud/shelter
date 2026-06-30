@@ -12,6 +12,15 @@
 	right: 0;
 }
 
+@media (hover: hover) and (pointer: fine) {
+	.popup:hover:not(:has(.popup__content:hover)) {
+		.popup__btn-close {
+			background-color: $color-primary-light;
+			border-color: $color-primary-light;
+		}
+	}
+}
+
 .popup__content {
 	width: rem(900px);
 	min-height: rem(500px);
