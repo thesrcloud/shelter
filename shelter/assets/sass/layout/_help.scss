@@ -1,0 +1,140 @@
+.help {
+    @extend %blocksPaddings;
+}
+
+.help__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__title {
+    width: rem(310px);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.help__icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(55px) rem(120px);
+    margin-top: rem(60px);
+}
+
+.help__icon {
+    height: rem(113px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.help__icon-image {
+    width: rem(60px);
+    height: rem(60px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain !important;
+}
+
+.icon-pet-food {
+    background: url('../../assets/icons/icon-pet-food.svg');
+}
+
+.icon-transportation {
+    background: url('../../assets/icons/icon-transportation.svg');
+}
+
+.icon-toys {
+    background: url('../../assets/icons/icon-toys.svg');
+}
+
+.icon-bowls-and-cups {
+    background: url('../../assets/icons/icon-bowls-and-cups.svg');
+}
+
+.icon-shampoos {
+    background: url('../../assets/icons/icon-shampoos.svg');
+}
+
+.icon-vitamins {
+    background: url('../../assets/icons/icon-vitamins.svg');
+}
+
+.icon-medicines {
+    background: url('../../assets/icons/icon-medicines.svg');
+}
+
+.icon-collars-leashes {
+    background: url('../../assets/icons/icon-collars-leashes.svg');
+}
+
+.icon-sleeping-area {
+    background: url('../../assets/icons/icon-sleeping-area.svg');
+}
+
+.help__icon-title {
+    font-family: $font-group-2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(20px);
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $color-dark-1;
+    margin: 0;
+}
+
+@media (max-width: 1110px) {
+    .help__icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: rem(55px) rem(60px);
+        margin-top: rem(60px);
+    }
+
+    .help__icon {
+        width: rem(170px);
+        height: rem(113px);
+    }
+}
+
+@media (max-width: 585px) {
+    .help__title {
+        width: 70vw;
+    }
+
+    .help__icons {
+        width: rem(290px);
+        justify-content: flex-start;
+        gap: rem(30px);
+        margin-top: rem(42px);
+    }
+
+    .help__icon {
+        width: rem(130px);
+        height: rem(87px);
+    }
+
+    .help__icon-image {
+        width: rem(50px);
+        height: rem(50px);
+        background-size: cover;
+    }
+
+    .help__icon-title {
+        font-size: rem(15px);
+        line-height: 110%;
+        letter-spacing: 0.06em;
+    }
+
+}
+
+@media (max-width: 322px) {
+    .help__icons {
+        justify-content: flex-start;
+    }
+}

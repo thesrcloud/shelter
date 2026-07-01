@@ -1,96 +1,83 @@
-"use strict";
+'use strict'
 
-const body = document.querySelector("body");
-const nav = document.querySelector(".nav");
-const navList = document.querySelector(".nav__list");
-const burgerBtn = document.querySelector(".burger-btn");
-let isOpened = false;
-let isActive = false;
-let linkAddress = null;
+const BODY = document.querySelector('body');
+const BURGER_BUTTON = document.querySelector('.header__burger-link');
+const NAV = document.querySelector('.nav');
+const NAV_LIST = document.querySelector('.nav__list');
+const NAV_LINKS = Array.from(document.querySelectorAll('.nav__link'));
+let menuStatus = 'closed';
 
-function checkResolution() {
-  return window.innerWidth;
-}
+BURGER_BUTTON.addEventListener('click', (e) => {
+    e.preventDefault();
+    showBurgerMenu();
+})
 
-function openMenu() {
-  burgerBtn.removeEventListener("click", getMenuEvent);
-  body.classList.add("overflow-dis");
-  nav.classList.add("d-flex");
-  navList.classList.add("open-menu");
-  burgerBtn.classList.add("burger-btn--active");
-  isActive = true;
+NAV.addEventListener('click', (e) => {
+    if (e.target.classList.contains('nav') && window.innerWidth < 768) showBurgerMenu();
+})
 
-  navList.addEventListener("animationend", finishOpen);
-
-  function finishOpen() {
-    navList.classList.remove("open-menu");
-    isOpened = true;
-    isActive = false;
-    burgerBtn.addEventListener("click", getMenuEvent);
-    navList.removeEventListener("animationend", finishOpen);
-  }
-}
-
-function closeMenu() {
-  navList.classList.add("close-menu");
-  burgerBtn.removeEventListener("click", getMenuEvent);
-  burgerBtn.classList.remove("burger-btn--active");
-  isActive = true;
-
-  navList.addEventListener("animationend", finishClose);
-
-  function finishClose() {
-    body.classList.remove("overflow-dis");
-    nav.classList.remove("d-flex");
-    navList.classList.remove("close-menu");
-    isOpened = false;
-    isActive = false;
-    burgerBtn.addEventListener("click", getMenuEvent);
-    navList.removeEventListener("animationend", finishClose);
-
-    if (linkAddress) {
-      console.log(linkAddress);
-      location.href = linkAddress;
-      linkAddress = null;
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        closeBurgerMenu();
     }
-  }
-}
+})
 
-function getMenuEvent() {
-  if (checkResolution() <= 767 && !isOpened) {
-    openMenu();
-  } else if (checkResolution() <= 767 && isOpened) {
-    closeMenu();
-  }
-}
-
-function resetMenu() {
-  isOpened = false;
-  burgerBtn.classList.remove("burger-btn--active");
-  body.classList.remove("overflow-dis");
-  nav.classList.remove("d-flex");
-}
-
-burgerBtn.addEventListener("click", getMenuEvent);
-
-window.addEventListener("resize", () => {
-  if (checkResolution() > 767 && isOpened) {
-    resetMenu();
-  }
-});
-
-window.addEventListener("click", (e) => {
-  if (isOpened && !isActive && e.target.classList.contains("nav")) {
-    closeMenu();
-  }
-});
-
-Array.from(document.querySelectorAll(".nav__link")).forEach((link) => {
-  link.addEventListener("click", (e) => {
-    if (isOpened) {
-      e.preventDefault();
-      linkAddress = link.href;
-      closeMenu();
+NAV_LIST.addEventListener('animationend', () => {
+    if (menuStatus == 'closed') {
+        menuStatus = 'opened';
+        BURGER_BUTTON.addEventListener('click', showBurgerMenu);
+        NAV_LIST.classList.add('nav__list_opened-position');
+    } else {
+        menuStatus = 'closed';
+        BODY.classList.remove('overflow-hidden');
+        NAV_LIST.classList.remove('nav__list_close');
+        NAV.classList.remove('burger-menu');
+        BURGER_BUTTON.classList.remove('burger-open');
+        BURGER_BUTTON.classList.remove('burger-close');
+        BURGER_BUTTON.addEventListener('click', showBurgerMenu);
     }
-  });
-});
+})
+
+NAV_LINKS.forEach(item => {
+    item.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+            e.preventDefault();
+            showBurgerMenu();
+
+            setTimeout(() => {
+                location.href = item.getAttribute('href');
+            }, 400)
+        }
+    })
+})
+
+// Open or close burger menu:
+function showBurgerMenu() {
+    if (menuStatus == 'closed') {
+        BODY.classList.add('overflow-hidden');
+        BURGER_BUTTON.classList.add('burger-open');
+        NAV_LIST.classList.add('nav__list_open');
+        NAV.classList.add('burger-menu');
+        BURGER_BUTTON.removeEventListener("click", showBurgerMenu);
+    } else if (menuStatus = 'opened') {
+        BURGER_BUTTON.classList.add('burger-close');
+        NAV_LIST.classList.remove('nav__list_open');
+        NAV_LIST.classList.remove('nav__list_opened-position');
+        NAV_LIST.classList.add('nav__list_close');
+        BURGER_BUTTON.removeEventListener("click", showBurgerMenu);
+    }
+}
+
+// Close burger menu:
+function closeBurgerMenu() {
+    menuStatus = 'closed';
+    BURGER_BUTTON.classList.add('burger-close');
+    NAV_LIST.classList.remove('nav__list_open');
+    NAV_LIST.classList.remove('nav__list_opened-position');
+    NAV_LIST.classList.add('nav__list_close');
+    BODY.classList.remove('overflow-hidden');
+    NAV_LIST.classList.remove('nav__list_close');
+    NAV.classList.remove('burger-menu');
+    BURGER_BUTTON.classList.remove('burger-open');
+    BURGER_BUTTON.classList.remove('burger-close');
+}

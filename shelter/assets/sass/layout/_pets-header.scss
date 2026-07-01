@@ -1,0 +1,50 @@
+.header {
+    height: rem(120px);
+    padding-top: 0;
+}
+
+.main-logo {
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.main-logo__title {
+    color: $color-dark-1;
+}
+
+.main-logo__description {
+    color: $color-dark-xl;
+}
+
+.nav__list {
+    a {
+        opacity: 0.8;
+        color: $color-dark-1;
+        padding-bottom: rem(3px);
+    }
+
+    .link__active {
+        opacity: 1;
+        border-bottom: 3px solid $color-main-orange;
+    }
+}
+
+.header__burger-button {
+    background-color: $color-black;
+
+    &::before {
+        background-color: $color-black;
+    }
+
+    &::after {
+        background-color: $color-black;
+    }
+}
+
+.burger-menu {
+    .nav__list {
+        background-color: $color-white;
+    }
+}

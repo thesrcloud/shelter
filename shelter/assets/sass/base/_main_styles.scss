@@ -1,0 +1,128 @@
+:root {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-group-1;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container {
+    width: rem(1280px);
+    margin: 0 auto;
+    padding: 0 rem(40px);
+}
+
+.title-h2 {
+    font-family: $font-group-2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(35px);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark;
+}
+
+.default-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(15px);
+    line-height: 160%;
+    color: $color-white-dark;
+}
+
+.button-main {
+    font-family: $font-group-2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(17px);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    background: $color-main-orange;
+    border-radius: rem(100px);
+    border: none;
+    outline: none;
+    color: #292929;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: rem(15px) rem(45px);
+
+    @media screen and (min-width: 480px) {
+        &:hover {
+            background: $color-main-orange-hover;
+        }
+    }
+
+    &:active {
+        background-color: $color-main-orange-hover;
+        border-color: $color-main-orange-hover;
+    }
+
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 920px) {
+    .container {
+        padding: 0 rem(30px);
+    }
+}
+
+@media (max-width: 535px) {
+    .container {
+        padding: 0 rem(14px);
+    }
+
+    .title-h2 {
+        width: 70vw;
+        font-size: 7.76vw;
+        letter-spacing: 0.06em;
+        align-self: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 319px) {
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 262px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 200px) {
+    :root {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 165px) {
+    :root {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 119px) {
+    :root {
+        font-size: 4px;
+    }
+}

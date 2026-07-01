@@ -1,8 +1,0 @@
-@use 'sass:math';
-
-@function rem($size) {
-    $value: $size - ($size - 1);
-    $sizeInt: math.div($size, $value);
-
-    @return  math.div($sizeInt, 16) + rem;
-}

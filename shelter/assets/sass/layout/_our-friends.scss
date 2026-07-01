@@ -1,0 +1,35 @@
+.our-friends {
+    @extend %blocksPaddings;
+}
+
+.our-friends {
+    background-color: $color-grey-light;
+}
+
+.our-friends__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-friends__title {
+    width: rem(400px);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.our-friends__slider {
+    margin: rem(59px) 0;
+}
+
+.our-friends__link {
+    text-decoration: none;
+}
+
+@media (max-width: 585px) {
+    .our-friends__title {
+        width: 90vw;;
+    }
+}
