@@ -390,20 +390,40 @@ template {
     transform: translateX(0%);
   }
 }
+@keyframes bs-move-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@keyframes bs-move-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 @keyframes fade-in {
   from {
     transform: scale(0);
+    opacity: 0;
   }
   to {
     transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes fade-out {
   from {
     transform: scale(1);
+    opacity: 1;
   }
   to {
     transform: scale(0);
+    opacity: 0;
   }
 }
 .open-menu {
@@ -422,25 +442,49 @@ template {
 .move-right {
   animation-name: move-right;
   animation-timing-function: ease;
-  animation-duration: 0.7s;
+  animation-duration: 0.6s;
 }
 
 .move-left {
   animation-name: move-left;
   animation-timing-function: ease;
-  animation-duration: 0.7s;
+  animation-duration: 0.6s;
+}
+
+.bs-move-right {
+  animation-name: bs-move-right;
+  animation-timing-function: ease;
+  animation-duration: 0.6s;
+}
+
+.bs-move-left {
+  animation-name: bs-move-left;
+  animation-timing-function: ease;
+  animation-duration: 0.6s;
+}
+
+.bs-move-right-fast {
+  animation-name: bs-move-right;
+  animation-timing-function: ease;
+  animation-duration: 0.2s;
+}
+
+.bs-move-left-fast {
+  animation-name: bs-move-left;
+  animation-timing-function: ease;
+  animation-duration: 0.2s;
 }
 
 .fade-in {
   animation-name: fade-in;
   animation-timing-function: ease;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
 }
 
 .fade-out {
   animation-name: fade-out;
   animation-timing-function: ease;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
 }
 
 :root {
