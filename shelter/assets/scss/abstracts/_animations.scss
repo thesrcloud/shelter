@@ -1,0 +1,136 @@
+@use 'variables' as *;
+
+@keyframes open-menu {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes move-right {
+    from {
+        transform: translateX(-105%);
+    }
+
+    to {
+        transform: translateX(-210%);
+    }
+}
+
+@keyframes move-left {
+    from {
+        transform: translateX(-105%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes bs-move-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes bs-move-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.open-menu {
+    animation-name: open-menu;
+    animation-timing-function: ease;
+    animation-duration: $animations-time;
+}
+
+.close-menu {
+    animation-name: open-menu;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+    animation-duration: $animations-time;
+}
+
+.move-right {
+    animation-name: move-right;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
+}
+
+.move-left {
+    animation-name: move-left;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
+}
+
+.bs-move-right {
+    animation-name: bs-move-right;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
+}
+
+.bs-move-left {
+    animation-name: bs-move-left;
+    animation-timing-function: ease;
+    animation-duration: $slider-time;
+}
+
+.bs-move-right-fast {
+    animation-name: bs-move-right;
+    animation-timing-function: ease;
+    animation-duration: $slider-time-fast;
+}
+
+.bs-move-left-fast {
+    animation-name: bs-move-left;
+    animation-timing-function: ease;
+    animation-duration: $slider-time-fast;
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-timing-function: ease;
+    animation-duration: $popup-time;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-timing-function: ease;
+    animation-duration: $popup-time;
+}
